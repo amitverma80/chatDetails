@@ -1,1 +1,18 @@
 
+[
+    {
+        "allow_email": "Y",
+        "expiry_date": "2023-02-15",
+        "id": "xyz"
+    },
+    {
+        "allow_email": "Y",
+        "expiry_date": "2023-02-15",
+        "id": "xyz"
+    },
+    {
+        "allow_email": "Y",
+        "expiry_date": "2023-02-15",
+        "id": "xyz"
+    }
+]
