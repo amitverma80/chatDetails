@@ -6,7 +6,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 
 
-namespace WhatsappAgentUI
+namespace MessangerUI
 {
     internal class ClientValidation
     {

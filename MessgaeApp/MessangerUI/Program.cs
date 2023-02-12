@@ -1,4 +1,4 @@
-namespace WhatsappAgentUI
+namespace MessangerUI
 {
     internal static class Program
     {

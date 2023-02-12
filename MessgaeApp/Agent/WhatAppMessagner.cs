@@ -10,7 +10,7 @@ using System.Linq;
 using System.Reflection;
 using Image = System.Drawing.Image;
 
-namespace WhatsappAgent
+namespace Agent
 {
     public class WhatAppMessagner
     {

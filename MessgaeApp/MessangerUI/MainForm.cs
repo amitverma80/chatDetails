@@ -1,6 +1,6 @@
-﻿using WhatsappAgent;
+﻿using Agent;
 
-namespace WhatsappAgentUI
+namespace MessangerUI
 {
     public partial class MainForm : Form
     {
@@ -14,7 +14,7 @@ namespace WhatsappAgentUI
         bool isLoggedin = false;
         private async void MainForm_Load(object sender, EventArgs e)
         {
-            label1.Visible = txtMessage.Visible = false;
+            txtMessage.Visible = false;
 
             txtMobileNumbers.Enabled = btnEmail.Enabled = btnSelectFiles.Enabled = btnSendMessage.Enabled = false;
 
@@ -33,8 +33,6 @@ namespace WhatsappAgentUI
             {
                 return;
             }
-
-
 
             textBox1.AppendLine("Drivers loaded successfully...");
 
@@ -98,9 +96,10 @@ namespace WhatsappAgentUI
                 textBox1.AppendLine(e.Error.ToString());
             }
 
-            label1.Visible = txtMessage.Visible = true;
+            txtMessage.Visible = true;
             txtMobileNumbers.Enabled = btnEmail.Enabled = btnSelectFiles.Enabled = btnSendMessage.Enabled = true;
             pbQRCode.Visible = false;
+            groupBox2.Text = "Type message here";
 
             isLoggedin = true;
             textBox1.AppendLine("Login Successful.");
@@ -108,6 +107,7 @@ namespace WhatsappAgentUI
 
         private async void btnSelectFiles_Click(object sender, EventArgs e)
         {
+            textBox1.Clear();
             try
             {
                 if (string.IsNullOrEmpty(txtMobileNumbers.Text.Trim()))
@@ -166,6 +166,7 @@ namespace WhatsappAgentUI
 
         private async void btnSendMessage_Click(object sender, EventArgs e)
         {
+            textBox1.Clear();
             try
             {
                 if (string.IsNullOrEmpty(txtMobileNumbers.Text.Trim()))

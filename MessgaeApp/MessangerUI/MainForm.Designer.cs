@@ -1,4 +1,4 @@
-﻿namespace WhatsappAgentUI
+﻿namespace MessangerUI
 {
     partial class MainForm
     {
@@ -35,10 +35,10 @@
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.btnSendMessage = new System.Windows.Forms.Button();
             this.btnSelectFiles = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnEmail = new System.Windows.Forms.Button();
             this.txtMobileNumbers = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbQRCode)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,19 +46,22 @@
             // 
             this.pbQRCode.BackColor = System.Drawing.Color.White;
             this.pbQRCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbQRCode.Location = new System.Drawing.Point(299, 12);
+            this.pbQRCode.Location = new System.Drawing.Point(305, 30);
             this.pbQRCode.Name = "pbQRCode";
             this.pbQRCode.Padding = new System.Windows.Forms.Padding(5);
-            this.pbQRCode.Size = new System.Drawing.Size(272, 285);
+            this.pbQRCode.Size = new System.Drawing.Size(306, 273);
             this.pbQRCode.TabIndex = 0;
             this.pbQRCode.TabStop = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 344);
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(11, 353);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(559, 159);
+            this.textBox1.Size = new System.Drawing.Size(608, 178);
             this.textBox1.TabIndex = 1;
             // 
             // backgroundWorker1
@@ -68,10 +71,11 @@
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(299, 30);
+            this.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMessage.Location = new System.Drawing.Point(305, 30);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(272, 267);
+            this.txtMessage.Size = new System.Drawing.Size(306, 273);
             this.txtMessage.TabIndex = 3;
             // 
             // btnSendMessage
@@ -94,15 +98,6 @@
             this.btnSelectFiles.UseVisualStyleBackColor = true;
             this.btnSelectFiles.Click += new System.EventHandler(this.btnSelectFiles_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(299, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 15);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Write Message Below";
-            // 
             // btnEmail
             // 
             this.btnEmail.Location = new System.Drawing.Point(436, 315);
@@ -115,39 +110,56 @@
             // 
             // txtMobileNumbers
             // 
+            this.txtMobileNumbers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMobileNumbers.Location = new System.Drawing.Point(18, 30);
             this.txtMobileNumbers.Multiline = true;
             this.txtMobileNumbers.Name = "txtMobileNumbers";
-            this.txtMobileNumbers.Size = new System.Drawing.Size(256, 267);
+            this.txtMobileNumbers.Size = new System.Drawing.Size(269, 273);
             this.txtMobileNumbers.TabIndex = 8;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(268, 295);
+            this.groupBox1.Size = new System.Drawing.Size(281, 297);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mobile Numbers";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox2.Location = new System.Drawing.Point(299, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(320, 297);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "QR Code";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(582, 512);
-            this.Controls.Add(this.pbQRCode);
+            this.ClientSize = new System.Drawing.Size(623, 531);
+            this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.txtMobileNumbers);
             this.Controls.Add(this.btnEmail);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSelectFiles);
             this.Controls.Add(this.btnSendMessage);
-            this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pbQRCode);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Send Messages";
@@ -167,9 +179,9 @@
         private TextBox txtMessage;
         private Button btnSendMessage;
         private Button btnSelectFiles;
-        private Label label1;
         private Button btnEmail;
         private TextBox txtMobileNumbers;
         private GroupBox groupBox1;
+        private GroupBox groupBox2;
     }
 }

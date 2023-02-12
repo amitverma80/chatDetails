@@ -1,4 +1,4 @@
-﻿namespace WhatsappAgentUI
+﻿namespace MessangerUI
 {
     partial class EncryptDecrpt
     {
